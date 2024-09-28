@@ -1,0 +1,133 @@
+.contact-us {
+   // .contact-us__wrapper
+
+   &__wrapper {
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px 25px;
+      border-radius: 40px;
+      position: relative;
+   }
+   &__image {
+      position: absolute;
+      width: 700px;
+      aspect-ratio: calc(700 / 770);
+      top: -60px;
+      right: 105px;
+      @media (max-width: 1440px) {
+         width: calc(500px + 200 * ((100vw - 1024px) / (1440 - 1024)));
+         right: calc(50px + 55 * ((100vw - 1024px) / (1440 - 1024)));
+         top: calc(50px - 110 * ((100vw - 1024px) / (1440 - 1024)));
+      }
+      @media (max-width: $tablet) {
+         display: none;
+      }
+   }
+   // .contact-us__title
+
+   &__title {
+   }
+   &__main {
+      border-radius: 40px;
+      background-color: $bg-black;
+      padding: 50px;
+   }
+   // .contact-us__form
+
+   &__form {
+      max-width: 350px;
+   }
+
+   // .contact-us__inputs
+
+   &__inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+   }
+
+   // .contact-us__btn
+
+   &__btn {
+      margin-top: 25px;
+      margin-bottom: 20px;
+   }
+
+   // .contact-us__checkbox
+
+   &__checkbox {
+      white-space: nowrap;
+   }
+   @media (max-width: $tablet) {
+      &__wrapper {
+         padding: 25px 10px;
+         border-radius: 20px;
+         gap: 15px;
+      }
+      &__main {
+         padding: 25px 10px;
+         border-radius: 20px;
+      }
+      &__form {
+         max-width: unset;
+      }
+      &__btn {
+         width: 100%;
+         padding: 0;
+      }
+      &__checkbox {
+         white-space: unset;
+      }
+   }
+}
+.contact-modal {
+   // .contact-modal__content
+
+   &__content {
+      width: 450px;
+      padding: 100px 45px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-radius: 20px;
+   }
+
+   // .contact-modal__close
+
+   &__close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+   }
+
+   // .contact-modal__title
+
+   &__title {
+   }
+
+   // .contact-modal__text
+
+   &__text {
+      margin-top: 10px;
+      margin-bottom: 45px;
+      @include text;
+   }
+   @media (max-width: $mobile) {
+      &__content {
+         width: calc(100% - 40px);
+      }
+      &__text {
+         margin-bottom: 40px;
+         @include link-text-mobile;
+      }
+      &__close {
+         right: 15px;
+         top: 15px;
+      }
+   }
+}

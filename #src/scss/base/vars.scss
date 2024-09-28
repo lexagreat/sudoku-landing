@@ -1,0 +1,101 @@
+$tablet: 1024px;
+$mobile: 768px;
+
+$black: #121212;
+$grey-mid: #6a6a6c;
+$grey: #b6b6b6;
+$white: #ffffff;
+$green: #0ad452;
+$violet: #b069ff;
+$red: #e04545;
+
+$bg-black: #222222;
+$bg-light: #efefef;
+$bg-light-blur: rgba(
+   $color: #d3d3d3,
+   $alpha: 30%,
+);
+$bg-blackout: rgba(
+   $color: #222222,
+   $alpha: 30%,
+);
+$bg-light: rgba(
+   $color: #efefef,
+   $alpha: 10%,
+);
+
+@mixin h1 {
+   font-weight: 600;
+   font-size: 90px;
+   letter-spacing: -0.03em;
+}
+@mixin h2 {
+   font-weight: 600;
+   font-size: 70px;
+   letter-spacing: -0.03em;
+}
+@mixin h3 {
+   font-weight: 600;
+   font-size: 30px;
+   letter-spacing: -0.03em;
+}
+@mixin title {
+   font-weight: 500;
+   font-size: 50px;
+   line-height: 1.1;
+   letter-spacing: -0.03em;
+}
+@mixin button-text {
+   font-weight: 600;
+   font-size: 18px;
+   letter-spacing: -0.03em;
+}
+
+@mixin link-text {
+   font-weight: 500;
+   font-size: 16px;
+   letter-spacing: -0.03em;
+}
+@mixin text {
+   font-weight: 400;
+   font-size: 16px;
+   letter-spacing: -0.03em;
+}
+
+@mixin h1-mobile {
+   font-weight: 600;
+   font-size: 36px;
+   letter-spacing: -0.03em;
+}
+@mixin h2-mobile {
+   font-weight: 600;
+   font-size: 28px;
+   letter-spacing: -0.03em;
+}
+@mixin h3-mobile {
+   font-weight: 600;
+   font-size: 20px;
+   letter-spacing: -0.03em;
+}
+@mixin title-mobile {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 1.1;
+   letter-spacing: -0.03em;
+}
+@mixin button-text-mobile {
+   font-weight: 600;
+   font-size: 14px;
+   letter-spacing: -0.03em;
+}
+
+@mixin link-text-mobile {
+   font-weight: 500;
+   font-size: 14px;
+   letter-spacing: -0.03em;
+}
+@mixin text-mobile {
+   font-weight: 400;
+   font-size: 14px;
+   letter-spacing: -0.03em;
+}
