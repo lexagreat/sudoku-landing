@@ -16,6 +16,12 @@
    // .games__slider
 
    &__slider {
+      display: flex;
+      gap: 20px;
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         gap: 15px;
+      }
       .swiper {
          @media (max-width: $tablet) {
             height: 715px !important;
@@ -38,9 +44,15 @@
    }
 }
 .games-slide {
+   max-width: 920px;
+   flex: 1;
    &.not-available {
+      max-width: 450px;
       .games-slide__link {
          display: none;
+      }
+      @media (max-width: $tablet) {
+         max-width: unset;
       }
    }
    display: flex;
@@ -94,19 +106,17 @@
 
    &__title {
    }
-
-   &.swiper-slide-active {
-      @media (hover: hover) {
-         &:hover {
-            .games-slide {
-               &__footer {
-                  opacity: 1;
-               }
+   @media (hover: hover) {
+      &:hover {
+         .games-slide {
+            &__footer {
+               opacity: 1;
             }
          }
       }
    }
    @media (max-width: $tablet) {
+      max-width: unset;
       &__link {
          width: 100%;
       }

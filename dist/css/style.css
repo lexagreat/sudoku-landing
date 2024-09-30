@@ -418,6 +418,28 @@ svg path {
   opacity: 1;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -3545,6 +3567,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   margin-bottom: 40px;
 }
 
+.games__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
 .games__slider .swiper-slide {
   max-width: 450px;
 }
@@ -3554,6 +3583,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .games-slide {
+  max-width: 920px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3565,6 +3598,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+
+.games-slide.not-available {
+  max-width: 450px;
 }
 
 .games-slide.not-available .games-slide__link {
@@ -3819,6 +3856,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     margin-bottom: 25px;
   }
 
+  .games__slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+
   .games__slider .swiper {
     height: 715px !important;
   }
@@ -3828,8 +3873,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     max-width: 100% !important;
   }
 
+  .games-slide.not-available {
+    max-width: unset;
+  }
+
   .games-slide__image img {
     height: 320px;
+  }
+
+  .games-slide {
+    max-width: unset;
   }
 
   .games-slide__link {
@@ -3975,7 +4028,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     color: #b069ff;
   }
 
-  .games-slide.swiper-slide-active:hover .games-slide__footer {
+  .games-slide:hover .games-slide__footer {
     opacity: 1;
   }
 }

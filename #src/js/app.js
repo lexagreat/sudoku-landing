@@ -150,18 +150,6 @@ function makeHeader() {
    window.addEventListener("scroll", () => {
       animateHeaderDown();
    });
-   const links = document.querySelectorAll(".header__links a");
-   links.forEach((link) => {
-      link.addEventListener("click", (e) => {
-         e.preventDefault();
-         document
-            .querySelector(link.getAttribute("data-scroll"))
-            .scrollIntoView({
-               top: 0,
-               behavior: "smooth",
-            });
-      });
-   });
 }
 
 function initGamesSlider() {
@@ -202,3 +190,13 @@ function raf(time) {
    requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+   anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      lenis.scrollTo(targetElement); // Используем метод lenis для плавной прокрутки
+   });
+});
