@@ -200,3 +200,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       lenis.scrollTo(targetElement); // Используем метод lenis для плавной прокрутки
    });
 });
+
+var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+   event.preventDefault();
+   var data = new FormData(event.target);
+   fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+         Accept: "application/json",
+      },
+   })
+      .then((response) => {
+         if (response.ok) {
+            form.reset();
+            popupOpen(document.querySelector("#contactModal"));
+         }
+      })
+      .catch((error) => {});
+}
+form.addEventListener("submit", handleSubmit);
