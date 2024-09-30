@@ -20,7 +20,7 @@
       gap: 20px;
       @media (max-width: $tablet) {
          flex-direction: column;
-         gap: 15px;
+         gap: 32px;
       }
       .swiper {
          @media (max-width: $tablet) {
@@ -124,6 +124,7 @@
          right: 20px;
          left: 20px;
          bottom: 17px;
+         opacity: 1;
       }
       .header__media {
          display: none;

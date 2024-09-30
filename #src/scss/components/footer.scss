@@ -57,4 +57,13 @@
          @include link-text-mobile;
       }
    }
+   @media (max-width: $mobile) {
+      &__wrapper {
+         padding-top: 12px;
+         padding-bottom: 12px;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 0;
+      }
+   }
 }
