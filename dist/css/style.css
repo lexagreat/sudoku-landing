@@ -3567,6 +3567,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   transition: 0.3s;
 }
 
+.games-slide.not-available .games-slide__link {
+  display: none;
+}
+
 .games-slide__image {
   position: relative;
   -webkit-transition: 0.3s;
@@ -3605,13 +3609,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.games-slide__footer .header__media {
-  opacity: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -3688,6 +3689,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @media (max-width: 1024px) {
   .btn {
     height: 48px;
+    border-radius: 10px;
   }
 
   .main {
@@ -3708,6 +3710,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   .app-input input {
     height: 50px;
+    border-radius: 10px;
   }
 
   .app-checkbox label {
@@ -3738,9 +3741,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   .footer__wrapper {
-    padding: 0 10px;
+    padding: 0 20px;
     border-radius: 10px;
-    height: 60px;
+    min-height: 60px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
+    row-gap: 0;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.03em;
@@ -3968,7 +3975,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     color: #b069ff;
   }
 
-  .games-slide.swiper-slide-active:hover .games-slide__footer .header__media {
+  .games-slide.swiper-slide-active:hover .games-slide__footer {
     opacity: 1;
   }
 }

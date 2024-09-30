@@ -75,6 +75,7 @@
    }
    @media (max-width: $tablet) {
       height: 48px;
+      border-radius: 10px;
    }
 }
 
@@ -175,6 +176,7 @@
    @media (max-width: $tablet) {
       input {
          height: 50px;
+         border-radius: 10px;
       }
    }
 }

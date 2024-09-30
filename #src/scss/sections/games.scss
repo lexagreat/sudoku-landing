@@ -38,6 +38,11 @@
    }
 }
 .games-slide {
+   &.not-available {
+      .games-slide__link {
+         display: none;
+      }
+   }
    display: flex;
    flex-direction: column;
    gap: 15px;
@@ -74,10 +79,11 @@
       bottom: 25px;
       display: flex;
       align-items: center;
+      opacity: 0;
       justify-content: space-between;
+      transition: 0.3s;
       .header__media {
-         opacity: 0;
-         transition: 0.3s;
+         // opacity: 0;
       }
    }
    &__link {
@@ -94,9 +100,7 @@
          &:hover {
             .games-slide {
                &__footer {
-                  .header__media {
-                     opacity: 1;
-                  }
+                  opacity: 1;
                }
             }
          }

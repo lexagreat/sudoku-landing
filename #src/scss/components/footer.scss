@@ -44,9 +44,12 @@
    }
    @media (max-width: $tablet) {
       &__wrapper {
-         padding: 0 10px;
+         padding: 0 20px;
          border-radius: 10px;
-         height: 60px;
+         min-height: 60px;
+         flex-wrap: wrap;
+         gap: 8px;
+         row-gap: 0;
          @include link-text-mobile;
       }
       &__copy,
